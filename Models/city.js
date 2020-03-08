@@ -12,5 +12,21 @@ class City {
         this.population = population;
         this.id = id;
     }
+    static headings(city, city_ascii, lat, lng, country, iso2, iso3, admin_name, capital, population, id) {
+        return {
+            city,
+            city_ascii,
+            lat,
+            lng,
+            country,
+            iso2,
+            iso3,
+            admin_name,
+            capital,
+            population,
+            id,
+        }
+    };
 }
+
 module.exports = City;
