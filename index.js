@@ -5,8 +5,8 @@ const output = [];
 let csvFile = 'Data/worldcities.csv';
 
 class csv {
-    static read_csv_file(csvFile, model) {
-        fs.createReadStream(csvFile)
+    static read_csv_file(file, model) {
+        fs.createReadStream(file)
             .pipe(parse({
                 columns: true,
                 delimiter: ',',
@@ -24,11 +24,8 @@ class csv {
                 // When we are done, test that the parsed output matched what expected
                 .on('end', function(){
 
-                    //  console.log(output);
-
                 }));
     }
 }
-csv.read_csv_file(csvFile, City);
 
 module.exports = csv;
